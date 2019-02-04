@@ -24,7 +24,6 @@
 
 #include <gnuradio/io_signature.h>
 #include "dvbs2mod_modulator_bc_impl.h"
-#include <stdio.h>
 
 namespace gr {
   namespace dvbs2mod {
@@ -2006,7 +2005,6 @@ namespace gr {
       }
       signal_constellation = constellation;
       signal_interpolation = interpolation;
-      printf("interp = %d\n", signal_interpolation);
       set_output_multiple(signal_interpolation + 1);
     }
 

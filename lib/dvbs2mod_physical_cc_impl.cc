@@ -24,7 +24,6 @@
 
 #include <gnuradio/io_signature.h>
 #include "dvbs2mod_physical_cc_impl.h"
-#include <stdio.h>
 
 namespace gr {
   namespace dvbs2mod {
@@ -655,7 +654,6 @@ namespace gr {
         pilot_symbols = 0;
       }
       signal_interpolation = interpolation;
-      printf("interp = %d\n", signal_interpolation);
       if (vlsnr_set == VLSNR_OFF) {
         set_output_multiple((((slots * 90) + 90) + pilot_symbols) * (signal_interpolation + 1));
       }
