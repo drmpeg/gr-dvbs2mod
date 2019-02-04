@@ -875,7 +875,7 @@ namespace gr {
         }
       }
       else if (vlsnr_set == VLSNR_SET1) {
-        for (int i = 0; i < noutput_items / 2; i += (((slots * 90) + 90) + pilot_symbols + VLSNR_HEADER_LENGTH + 36)) {
+        for (int i = 0; i < noutput_items / (signal_interpolation + 1); i += (((slots * 90) + 90) + pilot_symbols + VLSNR_HEADER_LENGTH + 36)) {
           n = 0;
           slot_count = 10;
           group = 0;
@@ -1098,7 +1098,7 @@ namespace gr {
         }
       }
       else {    /* VL-SNR set 2 */
-        for (int i = 0; i < noutput_items / 2; i += (((slots * 90) + 90) + pilot_symbols + VLSNR_HEADER_LENGTH + 36)) {
+        for (int i = 0; i < noutput_items / (signal_interpolation + 1); i += (((slots * 90) + 90) + pilot_symbols + VLSNR_HEADER_LENGTH + 36)) {
           n = 0;
           slot_count = 10;
           group = 0;
